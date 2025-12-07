@@ -1,5 +1,5 @@
 name: universal_extensions
-description: "A new Flutter package project."
+description: "A universal Flutter/Dart extension package providing commonly used extensions for Widgets, Strings, Dates, Lists, BuildContext, and more."
 version: 0.0.1
 homepage: "https://github.com/tuushars/universal_extensions"
 repository: "https://github.com/tuushars/universal_extensions"
