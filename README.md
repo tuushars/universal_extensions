@@ -20,6 +20,7 @@ A lightweight, powerful Flutter package providing **universal extension methods*
 * Convert directly to `Text` widget: `"Hello".txt()`
 * `capitalize()`
 * Safe parsing: `toInt()`, `toDouble()`
+* Email Validation Regex: `isEmail()`
 
 ### 🔢 Num Extensions
 
@@ -31,6 +32,10 @@ A lightweight, powerful Flutter package providing **universal extension methods*
 * Size: `context.width`, `context.height`
 * Themes: `context.theme`, `context.textTheme`
 * Safe pop: `context.safePop()`
+
+### DateTime Extensions
+
+* Check if its today: `isToday()`
 
 ---
 

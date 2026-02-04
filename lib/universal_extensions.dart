@@ -47,7 +47,7 @@ extension UniversalWidgetExtensions on Widget {
   Widget flexible({int flex = 1, FlexFit fit = FlexFit.loose}) => Flexible(flex: flex, fit: fit, child: this);
 
   /// Safe Area widget
-  Widget safeAre({bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, bool maintainBottomViewPadding = false}) => SafeArea(left: left, right: right, top: top, bottom: bottom, minimum: minimum, maintainBottomViewPadding: maintainBottomViewPadding, child: this);
+  Widget safeArea({bool left = true, bool top = true, bool right = true, bool bottom = true, EdgeInsets minimum = EdgeInsets.zero, bool maintainBottomViewPadding = false}) => SafeArea(left: left, right: right, top: top, bottom: bottom, minimum: minimum, maintainBottomViewPadding: maintainBottomViewPadding, child: this);
 }
 
 /// ------------------------------
@@ -70,6 +70,12 @@ extension UniversalStringExtensions on String {
 
   /// Convert to double safely
   double toDouble({double fallback = 0.0}) => double.tryParse(this) ?? fallback;
+
+  /// Check if the string is a valid email
+  bool isEmail() {
+    final emailRegex = RegExp(r'^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$');
+    return emailRegex.hasMatch(this);
+  }
 }
 
 /// ------------------------------
@@ -104,5 +110,16 @@ extension UniversalContextExtensions on BuildContext {
   /// Safe navigation pop
   void safePop() {
     if (Navigator.canPop(this)) Navigator.pop(this);
+  }
+}
+
+/// ------------------------------
+/// DATE EXTENSIONS
+/// ------------------------------
+extension UniversalDateExtensions on DateTime {
+  /// Check if the date is today
+  bool isToday() {
+    final now = DateTime.now();
+    return year == now.year && month == now.month && day == now.day;
   }
 }
