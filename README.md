@@ -135,3 +135,11 @@ If you want to add more extensions (animations, colors, lists, dates, async help
 ## 📄 License
 
 This package is open-source and available under the MIT License.
+
+---
+
+## 💙 Support My Work
+
+If you find this package helpful, consider sponsoring 🙌
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub-ff69b4?style=for-the-badge&logo=github)](https://github.com/sponsors/tuushars)
